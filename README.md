@@ -1,5 +1,6 @@
 # HexaLED
 Hexagon ceiling lights
+![Almost done, just need to hide the power injection wires](<Photos/Almost done (2k).jpg>)
 
 ## ToDo
 - add photos
