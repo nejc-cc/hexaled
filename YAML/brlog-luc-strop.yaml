@@ -1,0 +1,161 @@
+substitutions:
+  esphome_name: brlog-luc-strop
+
+esphome:
+  name: ${esphome_name}
+
+esp32:
+  board: esp32dev
+  framework:
+    type: esp-idf
+
+wifi:
+  networks:
+  - ssid: !secret <redacted>
+    password: !secret <redacted>
+  - ssid: !secret <redacted>
+    password: !secret <redacted>
+  manual_ip:
+    static_ip: !secret <redacted>
+    gateway: !secret <redacted>
+    subnet: !secret <redacted>
+
+#ethernet:
+#  type: LAN8720
+#  mdc_pin: GPIO23
+#  mdio_pin: GPIO18
+#  clk_mode: GPIO17_OUT
+#  phy_addr: 0
+#  use_address: 10.10.128.137
+
+web_server:
+  port: 80
+  auth:
+    username: !secret webuser
+    password: !secret webpass
+
+logger:
+
+# i2c:
+  # sda: 15
+  # scl: 16
+  # scan: true
+
+api:
+  reboot_timeout: 60min
+  encryption:
+    key: !secret <redacted>
+
+ota:
+  platform: esphome
+  password: !secret otapass
+
+time:
+  - platform: homeassistant
+    id: homeassistant_time
+
+switch:
+  # - platform: gpio
+    # name: "${esphome_name} Digital LED Power Relay"
+    # id: "DigPower"
+    # pin: GPIO13
+  
+  - platform: restart
+    name: ${esphome_name}-restart
+    id: restart_switch
+
+output:
+  - platform: ledc
+    pin: 33
+    frequency: 19531Hz
+    id: LED_channel_1
+
+  - platform: ledc
+    pin: 32
+    frequency: 19531Hz
+    id: LED_channel_2
+
+  - platform: ledc
+    pin: 12
+    frequency: 19531Hz
+    id: LED_channel_3
+
+  - platform: ledc
+    pin: 4
+    frequency: 19531Hz
+    id: LED_channel_4
+
+  # - platform: ledc
+    # pin: 2
+    # frequency: 19531Hz
+    # id: LED_channel_5
+
+light:
+  - platform: cwww
+    name: "Brlog stropna luc 1"
+    cold_white: LED_channel_1
+    warm_white: LED_channel_2
+    cold_white_color_temperature: 6500 K
+    warm_white_color_temperature: 2700 K
+    constant_brightness: false
+    
+  - platform: cwww
+    name: "Brlog stropna luc 2"
+    cold_white: LED_channel_3
+    warm_white: LED_channel_4
+    cold_white_color_temperature: 6500 K
+    warm_white_color_temperature: 2700 K
+    constant_brightness: false
+
+  # - platform: monochromatic
+    # name: "${esphome_name}-L1"
+    # default_transition_length: 1s
+    # id: LED1
+    # output: LED_channel_1
+
+  # - platform: monochromatic
+    # name: "${esphome_name}-L2"
+    # default_transition_length: 1s
+    # id: LED2
+    # output: LED_channel_2
+
+  # - platform: monochromatic
+    # name: "${esphome_name}-L3"
+    # default_transition_length: 1s
+    # id: LED3
+    # output: LED_channel_3
+
+  # - platform: monochromatic
+    # name: "${esphome_name}-L4"
+    # default_transition_length: 1s
+    # id: LED4
+    # output: LED_channel_4
+    
+  # - platform: monochromatic
+    # name: "${esphome_name}-L5"
+    # default_transition_length: 1s
+    # id: LED5
+    # output: LED_channel_5
+
+sensor:
+  - platform: uptime
+    name: "${esphome_name}_Uptime Sensor"
+
+# binary_sensor:
+  # - platform: gpio
+    # pin: 36
+    # name: Button_1
+    # filters:
+      # - invert:
+
+  # - platform: gpio
+    # pin: 39
+    # name: Button_2
+    # filters:
+      # - invert:
+
+  # - platform: gpio
+    # pin: 34
+    # name: Button_3
+    # filters:
+      # - invert:
