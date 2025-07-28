@@ -44,7 +44,7 @@ I decided to make 5 groups of 7 LED strips so the current is evenly distributed.
 Here's a list of what measurements are important:
 1. LED profiles need to be cut to 665 mm pieces
 2. LED strips need to be 616 mm long (cut at cut marks, they are spot-on)
-3. You need 2 length of cables: one that has straight wires needs to be XX mm long and the other that has crossed wires needs to be XX mm long.
+3. You need 2 length of cables: one that has straight wires needs to be 54 mm long and the other that has crossed wires needs to be 57 mm long.
 4. LED profile covers/diffusers need to be 640 mm long
 5. When soldering JST connectors to PCB, make sure to cut the legs before soldering so you get as low profile PCB as possible! I tried cutting/grinding them later but that takes waay more time.
 
@@ -107,7 +107,7 @@ Now remove backing foil from the strips and start gluing them to profiles. I fou
 
 ### Cables
 
-For cutting the cables I found it easiest to just prepare 2 heatshrink tubes that you put over the cables before you cut them. I prepared 1 tube for "shorter" cables (on top of photo) and 1 tube with a notch for the longer cables (bottom 2 cables, one has crossed wires but they are of same length). The short is XX mm long and the long one is XX mm long. For the longer cables, make sure to **shorten the middle wire by about 2 mm!**
+For cutting the cables I found it easiest to just prepare 2 heatshrink tubes that you put over the cables before you cut them. I prepared 1 tube for "shorter" cables (on top of photo) and 1 tube with a notch for the longer cables (bottom 2 cables, one has crossed wires but they are of same length). The short is 54 mm long and the long one is 57 mm long. For the longer cables, make sure to **shorten the middle wire by about 2 mm!**
 
 ![2 cable lengths](Photos/Project/Cable_lengths.jpg)
 
@@ -212,6 +212,26 @@ Make sure to not look at things cross-eyed as I apparently have. I triple-checke
 
 ![Another oopsie](Photos/Project/Measure_twice,_cut_twice.jpg)
 
+### Ordering PCBs
+
+I did choose the following options when ordering. The ones you should really pay attention to are "PCB Thickness: 1 mm" & I also chose "Remove mark / order number" simply because there is not much space on the boards.
+
+```
+Base Material: FR-4
+Layers: 4
+PCB Thickness: 1mm - IMPORTANT!
+Specify Stackup: no No requirement
+PCB Color: Green
+Silkscreen: White
+Material Type: FR-4 TG155
+Via Covering: Plugged
+Surface Finish: HASL(with lead)
+Deburring/Edge rounding: Yes
+Outer Copper Weight: 1 oz
+Inner Copper Weight: 0.5 oz
+Mark on PCB: Remove Mark
+Confirm Production file: No
+```
 
 ## Summary
 I totally overengineered this but.. Oh man it looks nice 😅 Not to mention how much it eliminates shadows! Crazy. Would I do it again? Now that it's done, maybe. If you asked me 2 days before coming to this stage: not a chance!
