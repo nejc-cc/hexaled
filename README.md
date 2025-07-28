@@ -44,7 +44,7 @@ I decided to make 5 groups of 7 LED strips so the current is evenly distributed.
 Here's a list of what measurements are important:
 1. LED profiles need to be cut to 665 mm pieces
 2. LED strips need to be 616 mm long (cut at cut marks, they are spot-on)
-3. You need 2 length of cables: one that has straight wires needs to be XX mm long and the other that has crossed wires needs to be XX mm long.
+3. You need 2 length of cables: one that has straight wires needs to be 54 mm long and the other that has crossed wires needs to be 57 mm long.
 4. LED profile covers/diffusers need to be 640 mm long
 5. When soldering JST connectors to PCB, make sure to cut the legs before soldering so you get as low profile PCB as possible! I tried cutting/grinding them later but that takes waay more time.
 
@@ -107,7 +107,7 @@ Now remove backing foil from the strips and start gluing them to profiles. I fou
 
 ### Cables
 
-For cutting the cables I found it easiest to just prepare 2 heatshrink tubes that you put over the cables before you cut them. I prepared 1 tube for "shorter" cables (on top of photo) and 1 tube with a notch for the longer cables (bottom 2 cables, one has crossed wires but they are of same length). The short is XX mm long and the long one is XX mm long. For the longer cables, make sure to **shorten the middle wire by about 2 mm!**
+For cutting the cables I found it easiest to just prepare 2 heatshrink tubes that you put over the cables before you cut them. I prepared 1 tube for "shorter" cables (on top of photo) and 1 tube with a notch for the longer cables (bottom 2 cables, one has crossed wires but they are of same length). The short is 54 mm long and the long one is 57 mm long. For the longer cables, make sure to **shorten the middle wire by about 2 mm!**
 
 ![2 cable lengths](Photos/Project/Cable_lengths.jpg)
 
