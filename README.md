@@ -1,12 +1,9 @@
 # HexaLED
 Modular hexagon ceiling lights using 24 V CCT COB LED strips
 
-![Almost done, just need to hide the power injection wires](Photos/Project/Final_product.jpg)
+*(yes, I need to hide power wires, I know 😅)*
 
-## ToDo
-- add photos
-- add files (.step, gerber, YAML for ESPHome)
-- hide the leftover wires
+![Almost done](Photos/Project/Final_product.jpg)
 
 ## Summary
 I saw many of these "Hexagon LED" ceiling lights but none that would fit my needs:
@@ -59,7 +56,7 @@ You need to cut the profiles to 665 mm pieces. Why 665? Well I got the profiles 
 
 ![Measuring and marking cuts](Photos/Project/Measuring_LED_profiles.jpg)
 
-I then went to work with angle grinders. First I cut the profiles then I used the 2nd grinder to deburr the edges a bit.
+I then went to work with angle grinders. First I cut the profiles then I used the 2nd grinder to round the edges a bit.
 
 ![Cutting profiles](Photos/Project/Angle_grinder_party.jpg)
 
@@ -118,11 +115,11 @@ It helps to move the wires to the side before soldering them. Make sure all the 
 
 ![Soldering crossed wires](Photos/Project/Soldering_crossed_wires.jpg)
 
-Don't hurry and make sure to check for potential shorts. Luckily I caught this one before I turned everything on. Pro tip: use a multimeter to check for shorts before powering it all on!
+Don't hurry and make sure to check for potential shorts. Luckily I caught this one before I turned everything on. Pro tip: use a multimeter to check for shorts before powering it all on! I know I've stripped the wires too much, I had to move them a bit because I couldn't connect them. Oops :)
 
 ![Oopsie](Photos/Project/Short.jpg)
 
-At first it seems like it's taking ages to make it but somehow it was easier the more I made. I didn't even solder all the cables either, no need to.
+At first it seems like it's taking ages to make it but somehow it was easier the more I made. I didn't even solder all the cables on both ends either, no need to.
 
 ![First few segments ready](Photos/Project/This_is_taking_ages.jpg)
 
@@ -138,7 +135,7 @@ You first need to make some evenly-spaced holes. This was my plan how I wanted i
 
 ![Mounting plan](Photos/Project/Mounting_plan.png)
 
-My neighbor has a laser CNC cutter and made me a jig that helped *immensely* when I was marking holes. I couldn't do this without my sister. I needed someone to hold it in place while I marked the holes. The first 6 holes were the most critical, if I messed them up, it would skew the whole project. I actually bought a laser for this purpose.
+My neighbor has a laser CNC cutter and made me a jig that helped *immensely* when I was marking holes. I also couldn't do this without my sister. I needed someone to hold it in place while I marked the holes. The first 6 holes were the most critical, if I messed them up, it would skew the whole project. I actually bought a line laser level for this purpose.
 
 ![Hole marking jiggy](Photos/Project/Mounting_holes_marking_jig.jpg)
 
@@ -150,7 +147,70 @@ When mounting the base parts, don't screw them tightly yet, you'll need to turn 
 
 I don't really have photos of whole mounting process but it's pretty straightforward. Space the profiles evenly, use 2 screws for each profile and that's about it.
 
-After connecting the Y and V PCBs and tucking in the cables, use the covers/diffusers and covers to hide everything
+After connecting the Y and V PCBs and tucking in the cables, use the covers/diffusers and covers to hide everything.
+
+![Diffusers](Photos/Project/Finishing_touches.jpg)
+
+This is why dimensions matter so much. There are a few mm you can cut from diffusers but if you cut more than 3-4 mm, the gap will show.
+
+![Y board with power](Photos/Project/Y_board_with_power_injection.jpg)
+
+![V board](Photos/Project/V-board.jpg)
+
+I prepared 3 different cover types: for normal 3-way junctions, for 2-way junctions (outside corners) and for junctions with power connections.
+
+![Different covers](Photos/Project/Covers.png)
+
+If you use the correct bit for your drill, you can actually hang it from the ceiling 😂
+
+![Hanging drill](Photos/Project/Use_correct_bit.jpg)
+
+### Connecting to controller
+
+Nothing special, just connect positive wire to positive output and negative CW/WW wires to respective outputs and that's it :)
+
+### YAML file for ESPHome
+
+Included in folder. It's just the example config really, nothing special.
+
+## Random tips and bits and bobs
+
+### Orientation
+
+I oriented all PCB the same way - positive rail on "top". This made it much easier to manipulate. Yes, you can keep tossing and turning them around but it did save me some time in the long run.
+
+I also made sure to have all segments that only had cables run from one side, to not use crossed wires. Try to avoid crossed wires as much as possible, they do show through diffuser. I could probably use hot glue or something to fix them but.. Nah :)
+
+### FLIR images
+My thermal camera showed no abnormalities when the strips were running at 100% after a few hours of "testing".
+
+LED controller
+
+![LED controller](Photos/FLIR/LED_controller.jpg)
+
+Power supply after 1 hour
+
+![Power supply](Photos/FLIR/Power_supply_at_full_load_after_1_hour.jpg)
+
+Power cables before/after closing them up
+
+![Power cables](Photos/FLIR/Power_injection_before_closing_covers.jpg)
+
+![Enclosed power cables](Photos/FLIR/Power_injection_cables.jpg)
+
+LED strips
+
+![LED strips 1](Photos/FLIR/Led_strips_1.jpg)
+![LED strips 2](Photos/FLIR/Led_strips_2.jpg)
+![LED strips 3](Photos/FLIR/Led_strips_3.jpg)
+![LED strips 4](Photos/FLIR/Led_strips_4.jpg)
+![LED strips 5](Photos/FLIR/Led_strips_5.jpg)
+
+### Measure 3 times, still cut twice
+
+Make sure to not look at things cross-eyed as I apparently have. I triple-checked the length and still managed to cut the strips too short. At least I found out after cutting 6 of them, not *all* of them. Whew!
+
+![Another oopsie](Photos/Project/Measure_twice,_cut_twice.jpg)
 
 
 ## Summary
