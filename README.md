@@ -1,6 +1,7 @@
 # HexaLED
-Hexagon ceiling lights
-![Almost done, just need to hide the power injection wires](<Photos/Almost done (2k).jpg>)
+Modular hexagon ceiling lights using 24 V CCT COB LED strips
+
+![Almost done, just need to hide the power injection wires](Photos/Project/Final_product.jpg)
 
 ## ToDo
 - add photos
@@ -9,14 +10,15 @@ Hexagon ceiling lights
 
 ## Summary
 I saw many of these "Hexagon LED" ceiling lights but none that would fit my needs:
-- 24 V
-- dimmable warm white / cold white
+- 24 V DC powered
+- dimmable warm white / cold white (CCT)
+- COB LEDs
 - low profile
 - able to be controlled locally via Home Assistant
 - freely extendable / modular
 
 ## How it started / bill of materials
-1. Controller: I first wanted to build a multi-channel N-FET driver board that would be able to control 10 output channels (for 5 CW/WW strips). Then I found out about these fancy thingies: [QuinLED An-Penta-Deca](https://quinled.info/quinled-an-penta-deca/) and [QuinLED An-Penta-Plus](https://quinled.info/quinled-an-penta-plus/). Well the first step was easy: add to cart 😂
+1. Controller: I first wanted to build a multi-channel N-FET driver board that would be able to control 10 output channels (for 5 CCT strips). Then I found out about these fancy thingies: [QuinLED An-Penta-Deca](https://quinled.info/quinled-an-penta-deca/) and [QuinLED An-Penta-Plus](https://quinled.info/quinled-an-penta-plus/). Well the first step was easy: add to cart 😂
 2. Power supply: [ERPF-400-24 from MEAN WELL](https://www.tme.eu/si/en/details/erpf-400-24/led-power-supplies/mean-well/) looked ok for me with some extra power leftover.
 3. LED strips: I decided on these: [AliExpress - FCOB CCT LED Light Strip 608 LEDs High Density Flexible FOB COB 10mm Led Lights RA90 2700K to 6000K Linear Dimmable DC24V](https://www.aliexpress.com/item/1005007162915201.html) - not an affiliate link. I went with 24 V type, I ordered 5 m long strips that I then cut into segments.
 4. Cables: I wanted silicone cables so they are easier to bend. I ordered a bunch of these 3-pin ones: [10Pcs JST XH 2s Battery Balancing Charge Plug Silicone Wire JST XH Female Cable 200mm 22AWG for RC Parts](https://www.aliexpress.com/item/1005008182460220.html) - not an affiliate link either. I went with these: 2S 3pin 200mm -10Pcs.
@@ -47,6 +49,59 @@ Here's a list of what measurements are important:
 3. You need 2 length of cables: one that has straight wires needs to be XX mm long and the other that has crossed wires needs to be XX mm long.
 4. LED profile covers/diffusers need to be 640 mm long
 5. When soldering JST connectors to PCB, make sure to cut the legs before soldering so you get as low profile PCB as possible! I tried cutting/grinding them later but that takes waay more time.
+
+## Build process
+I hope I can explain in enough detail how to make this :)
+
+### LED profiles
+You need to cut the profiles to 665 mm pieces. Why 665? Well I got the profiles in 2 m length and it was the least amount of waste doing it this way.
+
+![Measuring and marking cuts](Photos/Project/Measuring_LED_profiles.jpg)
+
+I then went to work with angle grinders. First I cut the profiles then I used the 2nd grinder to deburr the edges a bit.
+
+![Cutting profiles](Photos/Project/Angle_grinder_party.jpg)
+
+Manual file was used to reach inside parts of profile. I wanted to make all corners smooth, silicone wires are easily damaged!
+
+![Manual filing](Photos/Project/Filing_edges.jpg)
+
+I used a simple 3D printed jig to drill 3 mm holes in correct spot for all the profiles. Just make sure to clear out the debree every so often. I should've made the jig open from the bottom but.. Too late now :)
+
+![Drilling holes](Photos/Project/Drilling_jig.jpg)
+
+I made sure to have all edges nice and clean with no sharp edges.
+
+![Deburringg holes](Photos/Project/Deburring_holes.jpg)
+
+Last step is to mark where the strips need to be placed. Don't hurry or it will bit you later. Ask me how I know. Mark a line 25 mm from edge.
+
+![Mark 25 mm from edge](Photos/Project/Marking_for_strips.jpg)
+
+
+### PCB soldering
+
+The PCBs are really easy to solder, just keep in mind that you cut the connectors before soldering them!
+
+![Trimming connector leads](Photos/Project/Cutting_PCB_JST_connectors.jpg)
+
+Make sure all the solder joints are as flush as possible, there isn't a lot of free space that we're working with :)
+
+![Flush soldering](Photos/Project/Flush_soldering_job.jpg)
+
+You can use the jig that I also provided.
+
+![PCB solderingg jig](Photos/Project/Soldering_jig.jpg)
+
+Power injection "nodes" are a bit of a pain in the butt to make, I admit. Note to self: don't ever order PCBs at 1 AM. Sleep it over and order the next morning. I later replaced the wires with longer (and slightly thicker) ones so I could hide them better.
+
+![Power cables](Photos/Project/Power_injection.jpg)
+
+### LED strips
+
+Cut the strips at cut marks, my strips had them at about 616 mm
+
+![Strip length](Photos/Project/LED_strip_length.jpg)
 
 ## Summary
 I totally overengineered this but.. Oh man it looks nice 😅 Not to mention how much it eliminates shadows! Crazy. Would I do it again? Now that it's done, maybe. If you asked me 2 days before coming to this stage: not a chance!
