@@ -212,6 +212,26 @@ Make sure to not look at things cross-eyed as I apparently have. I triple-checke
 
 ![Another oopsie](Photos/Project/Measure_twice,_cut_twice.jpg)
 
+### Ordering PCBs
+
+I did choose the following options when ordering. The ones you should really pay attention to are "PCB Thickness: 1 mm" & I also chose "Remove mark / order number" simply because there is not much space on the boards.
+
+```
+Base Material: FR-4
+Layers: 4
+PCB Thickness: 1mm - IMPORTANT!
+Specify Stackup: no No requirement
+PCB Color: Green
+Silkscreen: White
+Material Type: FR-4 TG155
+Via Covering: Plugged
+Surface Finish: HASL(with lead)
+Deburring/Edge rounding: Yes
+Outer Copper Weight: 1 oz
+Inner Copper Weight: 0.5 oz
+Mark on PCB: Remove Mark
+Confirm Production file: No
+```
 
 ## Summary
 I totally overengineered this but.. Oh man it looks nice 😅 Not to mention how much it eliminates shadows! Crazy. Would I do it again? Now that it's done, maybe. If you asked me 2 days before coming to this stage: not a chance!
