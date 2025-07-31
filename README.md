@@ -1,9 +1,7 @@
 # HexaLED
 Modular hexagon ceiling lights using 24 V CCT COB LED strips
 
-*(yes, I need to hide power wires, I know 😅)*
-
-![Almost done](Photos/Project/Final_product.jpg)
+![Done CW/WW](Photos/Project/Finished_CW_WW.jpg)
 
 ## Summary
 I saw many of these "Hexagon LED" ceiling lights but none that would fit my needs:
@@ -160,6 +158,10 @@ This is why dimensions matter so much. There are a few mm you can cut from diffu
 I prepared 3 different cover types: for normal 3-way junctions, for 2-way junctions (outside corners) and for junctions with power connections.
 
 ![Different covers](Photos/Project/Covers.png)
+
+The cables were just tucked in some white heatshrink tube so they don't stand out as much.
+
+![White heatshrink tube magic](Photos/Project/Hidden_cables.jpg)
 
 If you use the correct bit for your drill, you can actually hang it from the ceiling 😂
 
