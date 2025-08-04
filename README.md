@@ -20,8 +20,8 @@ I saw many of these "Hexagon LED" ceiling lights but none that would fit my need
 5. I now needed some connectors where the cables will connect to. I ordered a bunch of S3B-XH-A-1 (LF)(SN) connectors from TME.eu: [TME.eu - S3B-XH-A-1 (LF)(SN)JST](https://www.tme.eu/si/en/details/s3b-xh-a-1/raster-signal-connectors-2-50mm/jst/s3b-xh-a-1-lf-sn/).
 6. Oh right, I need something to mount LED strips to! Luckily my local hardware store has these 2 m long anodized aluminium profiles that are meant for LED strips, with diffusers. Neat! The thing is, I don't have a link where to buy them or any article numbers. I'll post photos with measurements down below.
 7. How will I mount all this? Well the connectors need a PCB, so I made 2 simple designs and had it made by JLCPCB. The PCBs are 1 mm thick but are made from 4 layers. Top and bottom are 10 oz and both inside ones are 5 oz each so I connected both inner layers together. I only needed 3 layers anyway.
-8. 3D printed parts hold everything fixed up on the ceiling. I used white PETG, nothing special. I did use up over 1 kg of it thouggh. Some parts were scrap (bad design) but I do want the lights to stay up for a long time :)
-9. I also had a big issue of how am I going to align everything up on the ceiling correctly? I had my neighbor CNC cut a 3 mm thick aluminium jig that I used to mark all the holes with. I did need help of my sister for this - thanks sis :)
+8. 3D printed parts hold everything fixed up on the ceiling. I used white PETG, nothing special. I did use up over 1 kg of it though. Some parts were scrap (bad design) but I do want the lights to stay up for a long time :)
+9. I also had a big issue of how am I going to align everything up on the ceiling correctly? I had my neighbor CNC cut a 3 mm thick aluminium jig that I used to mark all the holes with. I did need the help of my sister for this - thanks sis :)
 10. Other material that I used:
 - M3x10 mm screws (DIN 912, 3 per cover),
 - 2.9X4.5 DIN7981 screws for mounting LED profile to 3D printed base (2 per profile),
@@ -44,7 +44,7 @@ Here's a list of what measurements are important:
 2. LED strips need to be 616 mm long (cut at cut marks, they are spot-on)
 3. You need 2 length of cables: one that has straight wires needs to be 54 mm long and the other that has crossed wires needs to be 57 mm long.
 4. LED profile covers/diffusers need to be 640 mm long
-5. When soldering JST connectors to PCB, make sure to cut the legs before soldering so you get as low profile PCB as possible! I tried cutting/grinding them later but that takes waay more time.
+5. When soldering JST connectors to PCB, make sure to cut the legs before soldering so you get as low profile PCB as possible! I tried cutting/grinding them later but that takes way more time.
 
 ## Build process
 I hope I can explain in enough detail how to make this :)
@@ -62,13 +62,13 @@ Manual file was used to reach inside parts of profile. I wanted to make all corn
 
 ![Manual filing](Photos/Project/Filing_edges.jpg)
 
-I used a simple 3D printed jig to drill 3 mm holes in correct spot for all the profiles. Just make sure to clear out the debree every so often. I should've made the jig open from the bottom but.. Too late now :)
+I used a simple 3D printed jig to drill 3 mm holes in correct spot for all the profiles. Just make sure to clear out the debris every so often. I should've made the jig open from the bottom but.. Too late now :)
 
 ![Drilling holes](Photos/Project/Drilling_jig.jpg)
 
 I made sure to have all edges nice and clean with no sharp edges.
 
-![Deburringg holes](Photos/Project/Deburring_holes.jpg)
+![Deburring holes](Photos/Project/Deburring_holes.jpg)
 
 Last step is to mark where the strips need to be placed. Don't hurry or it will bite you later. Ask me how I know. Mark a line 25 mm from edge.
 
@@ -137,7 +137,7 @@ My neighbor has a laser CNC cutter and made me a jig that helped *immensely* whe
 
 ![Hole marking jiggy](Photos/Project/Mounting_holes_marking_jig.jpg)
 
-My ceiling is made from drywall so I used the anchors that have normal M5 screws. I didn't dare to go with cheaper ones as that would prevent me from being unable to ever remove or replace anything. Not the cheapest solution, iKnow :/
+My ceiling is made from drywall so I used the anchors that have normal M5 screws. I didn't dare to go with cheaper ones as that would prevent me from being unable to ever remove or replace anything. Not the cheapest solution, i know :/
 
 When mounting the base parts, don't screw them tightly yet, you'll need to turn them to correct orientation first!
 
@@ -238,7 +238,7 @@ Confirm Production file: No
 ## Summary
 I totally overengineered this but.. Oh man it looks nice 😅 Not to mention how much it eliminates shadows! Crazy. Would I do it again? Now that it's done, maybe. If you asked me 2 days before coming to this stage: not a chance!
 
-Interesting info: at output of LED controller, I get 24,04 V and at end of strip that is farthest away, my voltemeter read 23,51 V. That is 0,53 V voltage drop and I think that's pretty good. Maybe I did go a bit overboard with using such thick wire for long runs but.. It is what it is. I'm not changing it now.
+Interesting info: at output of LED controller, I get 24,04 V and at end of strip that is farthest away, my voltmeter read 23,51 V. That is 0,53 V voltage drop and I think that's pretty good. Maybe I did go a bit overboard with using such thick wire for long runs but.. It is what it is. I'm not changing it now.
 
 Anyway, feel free to download the files and make your own hexagon ceiling lights. Let me know if I forgot to add any details or if you have any questions. This is one of the first projects that I started with when moving to a new apartment.
 
